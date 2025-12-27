@@ -4,9 +4,9 @@ A one-time fee of €100 (one-time) per legal entity is required for any Busines
 
 ## How to pay
 
-1. Contact IT’s Secured at: <contact email to be provided by Licensor>
+1. Contact IT’s Secured at: arno@itssecured.nl
 2. Provide your legal entity name and the intended use.
-3. Use the following payment reference method when instructed: <payment reference method to be provided by Licensor>
+3. Use the following payment reference method when instructed: Payment reference method will be provided by Licensor
 
 ## Proof of payment
 
