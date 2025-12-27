@@ -1,0 +1,36 @@
+{
+  "name": "webauthn-router-shared",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "audit-storage": "node ../../../../tools/webauthn/audit_storage_references.mjs",
+    "prebuild": "npm run audit-storage && node ./scripts/write-build-info.js",
+    "build": "tsc --project tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@simplewebauthn/server": "^13.2.2",
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "^17.0.4",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.19",
+    "typescript": "^5.4.5"
+  },
+  "overrides": {
+    "axios": "^1.12.2",
+    "js-yaml": "^4.1.1",
+    "vite": "^7.1.12",
+    "nodemailer": "^7.0.11"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collections": {
+    "credentials": "webauthn_credentials",
+    "challenges": "webauthn_challenges"
+  },
+  "credentials": [
+    {"field": "user", "type": "uuid", "schema": {"is_nullable": false}, "meta": {"special": ["m2o"], "required": true}},
+    {"field": "credential_id", "type": "string", "schema": {"is_nullable": false, "is_unique": true}, "meta": {"required": true}},
+    {"field": "public_key", "type": "text", "schema": {"is_nullable": false}, "meta": {"required": true}},
+    {"field": "sign_count", "type": "integer", "schema": {"is_nullable": true, "default_value": 0}, "meta": {"required": false}}
+  ],
+  "challenges": [
+    {"field": "type", "type": "string", "schema": {"is_nullable": false}, "meta": {"required": true}},
+    {"field": "challenge_id", "type": "string", "schema": {"is_nullable": false, "is_unique": true}, "meta": {"required": true}},
+    {"field": "challenge", "type": "json", "schema": {"is_nullable": false}, "meta": {"required": true}},
+    {"field": "expires_at", "type": "timestamp", "schema": {"is_nullable": false}, "meta": {"required": true}}
+  ]
+}

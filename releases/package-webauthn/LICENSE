@@ -1,0 +1,57 @@
+IT’s Secured Community + Business One-Time Fee License (v1.0)
+
+This license applies only to the Original Components contained in /releases/ and its first-level subfolders within this repository. It does not apply to any files outside /releases/.
+
+A) Definitions
+1. "Licensor" means IT’s Secured.
+2. "Original Components" means all files, folders, and artifacts located under /releases/ and its first-level subfolders in this repository.
+3. "You" means the individual or legal entity using the Original Components.
+4. "Private Use" means use by a natural person for non-commercial, personal purposes.
+5. "Non-profit" means a legally registered non-profit organization using the Original Components solely for non-commercial purposes.
+6. "Business/Commercial Use" means any use by a for-profit entity or any use intended for commercial advantage, revenue, or internal business operations, including (without limitation):
+   - use in a product or service offered for a fee,
+   - use in a business workflow or internal system,
+   - use by consultants or contractors for paying clients,
+   - distribution as part of a commercial offering.
+7. "Author Block" means the exact attribution text in /releases/NOTICE (and, if present, /releases/docs/AUTHOR_BLOCK.txt).
+
+B) Grant of Rights
+Subject to the terms below, the Licensor grants you a non-exclusive, worldwide license to use the Original Components as permitted in Sections C and D.
+
+C) Free Use Grant (Private + Non-profit)
+You may use the Original Components for Private Use or Non-profit use without payment, provided you comply with the Attribution Requirement in Section E and all other terms.
+
+D) Business/Commercial Use Grant (€100 one-time)
+If you intend any Business/Commercial Use, you must pay a one-time fee of €100 (one-time) per legal entity before use.
+After payment, you may use, modify, improve, and redistribute the Original Components, provided you comply with the Attribution Requirement in Section E and all other terms.
+Payment instructions are provided in /releases/PAYMENT.md.
+
+E) Attribution Requirement (Author Block)
+You must preserve the Author Block in all copies and in all substantial portions of the Original Components.
+Removing or altering the Author Block, or distributing the Original Components without the Author Block, automatically voids this license.
+
+F) Prohibited Actions
+You must not:
+- remove, alter, or obscure the Author Block,
+- claim authorship of the Original Components,
+- use the Original Components outside /releases/ without a separate license.
+
+G) Termination (Automatic Voiding)
+Any breach of this license automatically terminates your rights. Upon termination, you must stop all use and distribution of the Original Components. Sections E, H, I, and J survive termination.
+
+H) Warranty Disclaimer
+THE ORIGINAL COMPONENTS ARE PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. THE LICENSOR DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+I) Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE LICENSOR WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES ARISING OUT OF OR RELATING TO THE ORIGINAL COMPONENTS OR THIS LICENSE.
+
+J) Governing Law & Venue
+This license is governed by the laws of the Netherlands. Any dispute arising under this license will be resolved exclusively in the courts of the Netherlands.
+
+K) How to Comply
+1. For Private or Non-profit use: keep the Author Block intact and follow Section E.
+2. For Business/Commercial use: pay €100 (one-time) per legal entity using the payment instructions in /releases/PAYMENT.md, then keep the Author Block intact and follow Section E.
+3. Do not remove or alter the Author Block.
+
+Contact: <contact email to be provided by Licensor>
+Payment reference method: <payment reference method to be provided by Licensor>

@@ -1,0 +1,41 @@
+{
+  "options": {
+    "challenge": "XhvFIVQzucS186-RpwMPnQE91Lkn6QTYFvncUGScq70",
+    "rp": {
+      "name": "ITs_Secured",
+      "id": "example.test"
+    },
+    "user": {
+      "id": "CO-upqGTRfqSJGlewMHySQ",
+      "name": "reseller@example.test",
+      "displayName": "reseller@example.test"
+    },
+    "pubKeyCredParams": [
+      {
+        "alg": -8,
+        "type": "public-key"
+      },
+      {
+        "alg": -7,
+        "type": "public-key"
+      },
+      {
+        "alg": -257,
+        "type": "public-key"
+      }
+    ],
+    "timeout": 60000,
+    "attestation": "none",
+    "excludeCredentials": [],
+    "authenticatorSelection": {
+      "residentKey": "preferred",
+      "userVerification": "required",
+      "requireResidentKey": false
+    },
+    "extensions": {
+      "credProps": true
+    },
+    "hints": []
+  },
+  "mode": "passwordless"
+}

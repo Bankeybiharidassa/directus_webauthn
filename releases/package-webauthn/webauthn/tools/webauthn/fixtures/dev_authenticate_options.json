@@ -1,0 +1,12 @@
+{
+  "options": {
+    "rpId": "example.test",
+    "challenge": "olSBZAhkDZFxPg0idHaRh2uNoiGh0xuJJx54KPCV-UU",
+    "allowCredentials": [],
+    "timeout": 60000,
+    "userVerification": "required"
+  },
+  "mode": "passwordless",
+  "loginAttemptId": "eyJlbWFpbCI6InJlc2VsbGVyQGl0c3NlY3VyZWQubmwiLCJ1c2VySWQiOiIwOGVmYWVhNi1hMTkzLTQ1ZmEtOTIyNC02OTVlYzBjMWYyNDkiLCJjaGFsbGVuZ2UiOiJvbFNCWkFoa0RaRnhQZzBpZEhhUmgydU5vaUdoMHh1Skp4NTRLUENWLVVVIiwiY3JlYXRlZEF0IjoxNzY1ODkzMDgwNjMyLCJhdHRlbXB0SWQiOiJtZFVuVk5VSzRvTG1hcExyS3p3N0ciLCJzZWNyZXRWZXJzaW9uIjpudWxsfQ.ESMaE9pp2Q6vB7RQwWU9rJf7qkd3LY94vZqiCZHNUjk",
+  "attemptId": "mdUnVNUK4oLmapLrKzw7G"
+}

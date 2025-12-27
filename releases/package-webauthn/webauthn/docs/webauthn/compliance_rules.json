@@ -1,0 +1,88 @@
+{
+  "collections": {
+    "credentials": "webauthn_credentials",
+    "challenges": "webauthn_challenges"
+  },
+  "routes": [
+    { "method": "GET", "path": "/webauthn/health" },
+    { "method": "GET", "path": "/webauthn/credentials" },
+    { "method": "POST", "path": "/webauthn/registration/options" },
+    { "method": "POST", "path": "/webauthn/registration/verify" },
+    { "method": "POST", "path": "/webauthn/authentication/options" },
+    { "method": "POST", "path": "/webauthn/authentication/verify" },
+    { "method": "POST", "path": "/webauthn/login/start", "alias_for": "/webauthn/authentication/options" },
+    { "method": "POST", "path": "/webauthn/login/finish", "alias_for": "/webauthn/authentication/verify" },
+    { "method": "POST", "path": "/webauthn/drytest/options", "alias_for": "/webauthn/registration/options" },
+    { "method": "POST", "path": "/webauthn/drytest/verify", "alias_for": "/webauthn/registration/verify" }
+  ],
+  "required_fields": {
+    "webauthn_credentials": {
+      "id": { "note": "Primary key managed by Directus; integer or UUID allowed." },
+      "user": { "type": "uuid", "special": ["uuid"], "relation": "directus_users.id", "required": true },
+      "credential_id": { "type": "string", "unique": true },
+      "public_key": { "type": "text" },
+      "cose_alg": { "type": "integer", "nullable": true },
+      "sign_count": { "type": "integer", "default": 0 },
+      "transports": { "type": "json", "nullable": true },
+      "aaguid": { "type": "uuid", "nullable": true },
+      "device_type": { "type": "string", "nullable": true },
+      "backed_up": { "type": "boolean", "nullable": true },
+      "nickname": { "type": "string", "nullable": true },
+      "user_agent": { "type": "string", "nullable": true },
+      "origin": { "type": "string", "nullable": true },
+      "created_at": { "type": "datetime" },
+      "updated_at": { "type": "datetime" },
+      "last_used_at": { "type": "datetime", "nullable": true }
+    },
+    "webauthn_challenges": {
+      "id": { "note": "Primary key managed by Directus; integer or UUID allowed." },
+      "user": { "type": "uuid", "nullable": true, "relation": "directus_users.id" },
+      "challenge": { "type": "text" },
+      "type": { "type": "string" },
+      "expires_at": { "type": "datetime" },
+      "created_at": { "type": "datetime" },
+      "used_at": { "type": "datetime", "nullable": true },
+      "rp_id": { "type": "string", "nullable": true },
+      "origin": { "type": "string", "nullable": true }
+    }
+  },
+  "env": {
+    "RP_ID": { "required": true },
+    "RP_NAME": { "required": true },
+    "ORIGIN_ALLOWLIST": { "required": true },
+    "CHALLENGE_TTL_SECONDS": { "default": 300 },
+    "ATTESTATION": { "default": "none" },
+    "USER_VERIFICATION_DEFAULT": { "default": "preferred" },
+    "RESIDENT_KEY": { "default": "preferred" },
+    "ALLOWED_COSE_ALGS": { "default": [-7] },
+    "REQUIRE_UV_FOR": { "optional": true },
+    "CLOCK_SKEW_SECONDS": { "default": 0 },
+    "MAX_CREDENTIALS_PER_USER": { "optional": true },
+    "AUDIT_LOG_ENABLED": { "optional": true }
+  },
+  "errors": {
+    "storage_invalid": "webauthn_storage_schema_invalid",
+    "config_missing": "webauthn_not_configured",
+    "invalid_payload": "invalid_webauthn_response",
+    "invalid_credentials": "invalid_webauthn_credentials"
+  },
+  "security": {
+    "challenge_min_bytes": 16,
+    "challenge_recommended_bytes": 32,
+    "challenge_ttl_seconds": 300,
+    "single_use_challenge": true,
+    "require_rpid_hash": true,
+    "require_origin_allowlist": true
+  },
+  "tools": {
+    "provision": "tools/provision_webauthn_storage.py",
+    "verify": "tools/verify_webauthn_storage.py",
+    "audit": "tools/audit_webauthn_collections.sh",
+    "compliance": "tools/webauthn_compliance_check.sh"
+  },
+  "health": {
+    "fields": ["ok", "storage", "build"],
+    "build_fields": ["git_sha", "branch", "build_time", "package_version"],
+    "storage_fields": ["available", "missing_collections", "missing_fields_by_collection", "expected_schema_version"]
+  }
+}
